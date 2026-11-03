@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101010">
+<meta name="description" content="Inkfinity Tattoo Studio — tattoo art, design inspiration and studio showcase in Ludhiana, Punjab.">
+<title>Inkfinity Tattoo Studio | Ludhiana</title>
+<style>
+:root{--bg:#101010;--panel:#191919;--text:#f5f1e9;--muted:#aaa49a;--gold:#c9a56a;--line:#ffffff1a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}button{font:inherit}
+.topbar{height:76px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:absolute;top:0;width:100%;z-index:5;background:#101010a8;backdrop-filter:blur(12px)}
+.logo{font-family:Georgia,serif;font-size:25px;letter-spacing:2px}.logo span{color:var(--gold)}.nav{display:flex;gap:30px;color:#ddd;font-size:13px;letter-spacing:1px;text-transform:uppercase}.nav a:hover{color:var(--gold)}
+.menu{display:none;background:none;border:1px solid var(--line);color:white;padding:8px 12px}
+.hero{min-height:730px;display:flex;align-items:center;padding:130px 9% 90px;position:relative;overflow:hidden;background:linear-gradient(90deg,#080808 0%,#080808e8 42%,#08080835 100%),url('https://images.unsplash.com/photo-1546105444-1fbb32bc1162?auto=format&fit=crop&w=2000&q=85') center/cover}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--bg),transparent 30%);pointer-events:none}.hero-content{max-width:650px;position:relative;z-index:1}.eyebrow{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-size:11px;font-weight:bold}.hero h1{font:clamp(56px,9vw,112px)/.92 Georgia,serif;margin:24px 0}.hero h1 em{color:var(--gold);font-weight:normal}.hero p{max-width:480px;color:#c6c0b7;line-height:1.8;font-size:16px}.hero-actions{display:flex;gap:14px;margin-top:32px}.btn{padding:15px 23px;border:1px solid var(--gold);font-size:11px;letter-spacing:1.5px;text-transform:uppercase}.btn.primary{background:var(--gold);color:#111}.btn:hover{transform:translateY(-2px);transition:.2s}
+section{padding:95px 8%}.section-head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:42px}.section-head h2{font:clamp(36px,5vw,58px) Georgia,serif;margin:12px 0 0}.section-head p{max-width:390px;color:var(--muted);line-height:1.7;font-size:14px}.about{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;background:#151515}.about-photo{height:510px;position:relative}.about-photo img{width:100%;height:100%;object-fit:cover;display:block}.photo-tag{position:absolute;bottom:20px;left:20px;background:var(--gold);color:#111;padding:13px 18px;font-size:11px;letter-spacing:2px;text-transform:uppercase}.about-copy h2{font:clamp(38px,5vw,60px) Georgia,serif;margin:15px 0 22px}.about-copy p{color:var(--muted);line-height:1.9;font-size:15px}.stats{display:flex;gap:35px;margin-top:32px;border-top:1px solid var(--line);padding-top:25px}.stats strong{display:block;font:30px Georgia,serif;color:var(--gold)}.stats small{color:var(--muted);font-size:10px;letter-spacing:1px;text-transform:uppercase}
+.styles{background:var(--bg)}.style-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.style-card{background:var(--panel);padding:28px 22px;border:1px solid var(--line);min-height:180px;transition:.25s}.style-card:hover{border-color:var(--gold);transform:translateY(-5px)}.style-card b{font:26px Georgia,serif;color:var(--gold);display:block;margin-bottom:18px}.style-card h3{font:22px Georgia,serif;margin:0 0 10px}.style-card p{color:var(--muted);font-size:13px;line-height:1.6;margin:0}
+.gallery{background:#151515}.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:250px;gap:14px}.gallery-item{overflow:hidden;position:relative;background:#242424}.gallery-item:first-child{grid-row:span 2}.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}.gallery-item:hover img{transform:scale(1.06)}.gallery-item span{position:absolute;bottom:0;left:0;right:0;padding:35px 18px 17px;background:linear-gradient(transparent,#000c);font:20px Georgia,serif}
+.process{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}.step{border-top:1px solid var(--gold);padding-top:22px}.step span{color:var(--gold);font-size:11px;letter-spacing:2px}.step h3{font:25px Georgia,serif}.step p{color:var(--muted);font-size:14px;line-height:1.8}
+.notice{background:#211d17;border:1px solid #c9a56a55;padding:24px 28px;margin-top:45px;color:#d5c8b5;line-height:1.7;font-size:13px}.notice strong{color:var(--gold)}
+footer{padding:45px 8%;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;align-items:center;color:var(--muted);font-size:12px}.footer-logo{font:24px Georgia,serif;color:var(--text)}.footer-logo span{color:var(--gold)}
+@media(max-width:800px){.topbar{padding:0 5%}.nav{display:none;position:absolute;top:75px;left:0;right:0;background:#111;padding:22px 6%;flex-direction:column;gap:20px}.nav.open{display:flex}.menu{display:block}.hero{min-height:680px;padding:130px 7% 80px;background-position:58% center}.about{grid-template-columns:1fr;gap:35px}.about-photo{height:380px}.style-grid{grid-template-columns:repeat(2,1fr)}.gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:210px}.gallery-item:first-child{grid-row:span 1}.process{grid-template-columns:1fr;gap:35px}.section-head{display:block}.section-head p{margin-top:15px}footer{flex-direction:column;align-items:flex-start}}
+@media(max-width:430px){.logo{font-size:21px}.hero h1{font-size:58px}.hero-actions{flex-direction:column;align-items:flex-start}.style-grid{grid-template-columns:1fr 1fr;gap:9px}.style-card{padding:20px 15px}.gallery-grid{grid-auto-rows:170px;gap:9px}.stats{gap:20px}.stats strong{font-size:25px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="logo" href="#home">INK<span>FINITY</span>.</a>
+  <nav class="nav" id="nav"><a href="#about">Our story</a><a href="#styles">Styles</a><a href="#gallery">Gallery</a><a href="#process">Studio notes</a></nav>
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="eyebrow">Tattoo art · Ludhiana, Punjab</div>
+    <h1>Wear your<br><em>story.</em></h1>
+    <p>Where imagination meets ink. Explore expressive tattoo styles, thoughtful design and the craft behind every piece at Inkfinity Tattoo Studio.</p>
+    <div class="hero-actions"><a class="btn primary" href="#gallery">Explore the gallery</a><a class="btn" href="#about">Discover Inkfinity</a></div>
+  </div>
+</section>
+<section class="about" id="about">
+  <div class="about-photo"><img src="https://images.unsplash.com/photo-1546105444-1fbb32bc1162?auto=format&fit=crop&w=1100&q=85" alt="Tattoo artist at work" loading="lazy"><div class="photo-tag">Art with intention</div></div>
+  <div class="about-copy"><div class="eyebrow">A little about us</div><h2>More than ink.<br>It's expression.</h2><p>Inkfinity is a tattoo-studio concept based in Ludhiana, built around creativity, individuality and respect for the art form. From delicate linework to bold illustrative pieces, every design begins with an idea and a story.</p><p>Our visual approach is simple: thoughtful designs, careful craft and a studio culture that puts hygiene, informed choices and professionalism first.</p><div class="stats"><div><strong>∞</strong><small>Ideas to explore</small></div><div><strong>01</strong><small>Personal story</small></div><div><strong>100%</strong><small>Creative spirit</small></div></div></div>
+</section>
+<section class="styles" id="styles">
+ <div class="section-head"><div><div class="eyebrow">Find your aesthetic</div><h2>Art styles</h2></div><p>Every style has its own character. Explore a few popular visual directions and discover what speaks to you.</p></div>
+ <div class="style-grid">
+  <article class="style-card"><b>01</b><h3>Fine Line</h3><p>Delicate details, subtle shapes and elegant linework.</p></article>
+  <article class="style-card"><b>02</b><h3>Blackwork</h3><p>Bold contrast, strong shapes and striking compositions.</p></article>
+  <article class="style-card"><b>03</b><h3>Realism</h3><p>Portrait-inspired art with depth, texture and dimension.</p></article>
+  <article class="style-card"><b>04</b><h3>Geometric</h3><p>Symmetry, patterns and clean visual structure.</p></article>
+ </div>
+</section>
+<section class="gallery" id="gallery">
+ <div class="section-head"><div><div class="eyebrow">A visual moodboard</div><h2>Ink inspiration</h2></div><p>A selection of tattoo-craft photography to set the mood. These are illustrative reference photos, not a claim of completed Inkfinity client work.</p></div>
+ <div class="gallery-grid">
+  <div class="gallery-item"><img src="https://images.unsplash.com/photo-1546105444-1fbb32bc1162?auto=format&fit=crop&w=1000&q=85" alt="Tattoo artist working in studio" loading="lazy"><span>The craft</span></div>
+  <div class="gallery-item"><img src="https://lwmag.co.za/wp-content/uploads/2022/01/1.jpeg" alt="Artist focused on a tattoo session" loading="lazy"><span>Focus & detail</span></div>
+  <div class="gallery-item"><img src="https://cdn.hibuwebsites.com/11852fd09a41477f847e976f98134f76/dms3rep/multi/1st-revelation-tattoo-tod-bain.jpeg" alt="Black and white tattoo artist portrait" loading="lazy"><span>Artist at work</span></div>
+  <div class="gallery-item"><img src="https://images.unsplash.com/photo-1546105444-1fbb32bc1162?auto=format&fit=crop&w=900&q=80" alt="Tattoo studio close-up" loading="lazy"><span>Precision</span></div>
+  <div class="gallery-item"><img src="https://api.thesecret.app/images/secrets/2382/01658236826.png" alt="Tattoo artist creating linework" loading="lazy"><span>Line & form</span></div>
+ </div>
+</section>
+<section id="process">
+ <div class="section-head"><div><div class="eyebrow">Thoughtful by design</div><h2>Studio values</h2></div><p>Good tattoo culture starts with good decisions. These principles belong at the centre of every professional studio.</p></div>
+ <div class="process">
+  <article class="step"><span>01 / DESIGN</span><h3>Make it meaningful</h3><p>Take time to understand the artwork, its placement and whether the design will still feel right over time.</p></article>
+  <article class="step"><span>02 / HYGIENE</span><h3>Safety comes first</h3><p>Professional studios should follow applicable hygiene standards, use sterile single-use needles and explain aftercare clearly.</p></article>
+  <article class="step"><span>03 / RESPECT</span><h3>Informed choices</h3><p>Ask questions, understand the permanence and risks, and never feel pressured into a body-art decision.</p></article>
+ </div>
+ <div class="notice"><strong>Important:</strong> This is a sample portfolio website concept. It does not accept appointments or represent verified services, prices, address or contact details. Tattooing is permanent and carries health risks; this site is informational only and intended for adults. Follow local laws and seek qualified professional advice before making any decision.</div>
+</section>
+</main>
+<footer><div class="footer-logo">INK<span>FINITY</span>.</div><div>Ludhiana, Punjab, India</div><div>© <span id="year"></span> Inkfinity Tattoo Studio · Concept website</div></footer>
+<script>
+const menu=document.getElementById('menu'),nav=document.getElementById('nav');
+menu.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+document.getElementById('year').textContent=new Date().getFullYear();
+// If an external photo host is unavailable, use a second real studio photo instead of showing a broken image.
+document.querySelectorAll('img').forEach(img=>img.addEventListener('error',()=>{
+  if(!img.dataset.fallback){img.dataset.fallback='1';img.src='https://images.unsplash.com/photo-1546105444-1fbb32bc1162?auto=format&fit=crop&w=1100&q=85';}
+}));
+</script>
+</body>
+</html>
